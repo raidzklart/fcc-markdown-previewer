@@ -1,28 +1,135 @@
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-top: 30px;
+    background: white;
+    margin: 10px 0;
+}
+
+#preview {
+    white-space: pre-line;
+    display: inline-block;
+    border-top: solid black 1px;
+}
+
+.title {
+    white-space: pre-line;
     text-align: center;
 }
 
-#editor {
-    width: 600px;
-    height: 120px;
-    border: 3px solid #cccccc;
-    padding: 5px;
-    font-family: Tahoma, sans-serif;
-    font-size: 14px;
-    background-position: bottom right;
-    background-repeat: no-repeat;
+.colorScheme {
+    background-color: white;
+    border: 1px solid white;
+    border-top: none;
 }
 
-/* #preview {
-    margin: auto;
-    text-align: start;
-    width: 840px;
-    height: 40vh;
-    border: 3px solid #cccccc;
-    padding: 5px;
-    font-family: Tahoma, sans-serif;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-} */
+
+.editorWrap {
+    border: solid black 1px;
+    width: 600px;
+    margin: 18px auto;
+}
+
+.editorWrap textarea {
+    background-color: white;
+    width: 99%;
+    min-height: 200px;
+    margin-bottom: -5px;
+    resize: vertical;
+    outline: none;
+    padding-left: 5px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+.previewWrap {
+    background-color: white;
+    border: 1px solid black;
+    width: 800px;
+    margin: 20px auto;
+    min-height: 200px;
+    overflow-wrap: break-word;
+    padding-right: 20px;
+}
+
+.previewWrap .toolbar {
+    left: -1px;
+    width: 100%;
+    padding-right: 17px;
+}
+
+.previewWrap #preview {
+    margin-left: 5px;
+    margin-top: -10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+    .previewWrap {
+        width: 630px;
+    }
+
+    .editorWrap {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        margin: 5px 0;
+    }
+
+    .editorWrap {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .previewWrap {
+        width: 95vw;
+
+    }
+
+    .previewWrap #preview {
+        width: 100%;
+    }
+
+    .previewWrap #preview img {
+        height: 200px;
+    }
+}
+
+/* MARKDOWN STYLES */
+#preview blockquote {
+    border-left: 3px solid black;
+    color: black;
+    padding-left: 5px;
+    margin-left: 25px;
+}
+
+#preview code {
+    background: white;
+    padding: 1px 4px 2px 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#preview pre {
+    background: white;
+    padding: 5px 0 5px 5px;
+}
+
+#preview h1 {
+    border-bottom: 2px solid black;
+}
+
+#preview h2 {
+    border-bottom: 1px solid black;
+}
+
+#preview table {
+    border-collapse: collapse;
+}
+
+#preview td,
+th {
+    border: 2px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+}

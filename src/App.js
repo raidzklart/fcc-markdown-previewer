@@ -30,14 +30,14 @@ export default class App extends Component {
         "And feel free to go crazy ~~crossing stuff out~~. \n" +
 
         "There's also [links](https://www.freecodecamp.com), and \n" +
-        "> Block Quotes! \n" +
+        "> Block Quotes! \n\n" +
 
-        "And if you want to get really crazy, even tables: \n" +
+        "And if you want to get really crazy, even tables: \n\n" +
 
         "Wild Header | Crazy Header | Another Header? \n" +
         "------------ | ------------- | -------------  \n" +
         "Your content can | be here, and it | can be here.... \n" +
-        "And here. | Okay. | I think we get it. \n" +
+        "And here. | Okay. | I think we get it. \n\n" +
 
         "- And of course there are lists. \n" +
         "  - Some are bulleted. \n" +
@@ -63,12 +63,12 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div>
-          <h1>Enter Markdown</h1>
+        <div className="editorWrap" >
+          <h1 className="title" >Editor</h1>
           <textarea id="editor" cols="80" rows="15" value={this.state.preview} onChange={(event) => this.onHandleChange(event)}></textarea>
         </div>
-        <div className="mardown-output">
-          <h1>Markdown Output</h1>
+        <div className="previewWrap">
+          <h1 className="title" >Previewer</h1>
           <div id="preview" dangerouslySetInnerHTML={{ __html: marked(this.state.preview) }} >
           </div>
         </div>
